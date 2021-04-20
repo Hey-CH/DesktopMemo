@@ -1,0 +1,29 @@
+﻿<Window x:Class="DesktopMemo.Memo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopMemo"
+        mc:Ignorable="d"
+        Title="Memo" Height="{Binding MemoHeight,Mode=TwoWay}" Width="{Binding MemoWidth,Mode=TwoWay}" Left="{Binding MemoLeft,Mode=TwoWay}" Top="{Binding MemoTop,Mode=TwoWay}"
+         MinWidth="130" MinHeight="40"
+        SizeToContent ="WidthAndHeight"
+        WindowStyle="None"
+        AllowsTransparency="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="1" x:Name="textBox1" Text="{Binding Text,UpdateSourceTrigger=PropertyChanged}" MinWidth="130" MinHeight="25" AcceptsReturn="True" />
+    </Grid>
+    <Window.ContextMenu>
+        <ContextMenu Name="_menu" StaysOpen="true">
+            <MenuItem Header="フォント" Click="MenuItem_Click_1" />
+            <MenuItem Header="カラー" Click="MenuItem_Click_2" />
+            <MenuItem Header="ウィンドウカラー" Click="MenuItem_Click_3" />
+            <Separator />
+            <MenuItem Header="終了" Click="MenuItem_Click" />
+        </ContextMenu>
+    </Window.ContextMenu>
+</Window>

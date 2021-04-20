@@ -1,0 +1,35 @@
+﻿<Window x:Class="DesktopMemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopMemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="120" Width="300" Left="{Binding MainLeft,Mode=TwoWay}" Top="{Binding MainTop,Mode=TwoWay}"
+        SizeToContent ="WidthAndHeight"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ContentRendered="Window_ContentRendered"
+        Closing="Window_Closing">
+    <Grid>
+        <TextBlock x:Name="textBlock1" Text="{Binding Time}" FontSize="36" FontWeight="Bold">
+            <TextBlock.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Style>
+            </TextBlock.Resources>
+        </TextBlock>
+    </Grid>
+    <Window.ContextMenu>
+        <ContextMenu Name="_menu" StaysOpen="true">
+            <MenuItem Header="メモ追加" Click="MenuItem_Click_3" />
+            <MenuItem Header="常に手前に表示" Click="MenuItem_Click_4" />
+            <Separator />
+            <MenuItem Header="フォント" Click="MenuItem_Click_1" />
+            <MenuItem Header="カラー" Click="MenuItem_Click_2" />
+            <Separator />
+            <MenuItem Header="終了" Click="MenuItem_Click" />
+        </ContextMenu>
+    </Window.ContextMenu>
+</Window>

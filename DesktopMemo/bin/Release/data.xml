@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ViewModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MainLeft>1080</MainLeft>
+  <MainTop>4</MainTop>
+  <Memos>
+    <MemoViewModel>
+      <Text>今日はasync/awaitについて
+勉強してみようかなぁ</Text>
+      <MemoLeft>976</MemoLeft>
+      <MemoTop>56</MemoTop>
+      <MemoHeight>65</MemoHeight>
+      <MemoWidth>281</MemoWidth>
+      <MemoFontAsString>MS UI Gothic, 18pt, style=Bold</MemoFontAsString>
+      <MemoColorAsString>Black</MemoColorAsString>
+      <MemoWindowColorAsString>128, 255, 0</MemoWindowColorAsString>
+    </MemoViewModel>
+  </Memos>
+  <MainFontAsString>MS UI Gothic, 36pt, style=Bold</MainFontAsString>
+  <MainColorAsString>0, 128, 64</MainColorAsString>
+</ViewModel>
